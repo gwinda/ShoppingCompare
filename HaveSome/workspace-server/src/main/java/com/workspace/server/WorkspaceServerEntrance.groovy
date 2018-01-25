@@ -8,6 +8,7 @@ class WorkspaceServerEntrance {
 
     static void main(String[] args){
         SpringApplication.run(WorkspaceServerEntrance.class, args)
+
     }
 
 }
