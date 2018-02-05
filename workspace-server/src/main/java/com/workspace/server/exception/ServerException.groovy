@@ -34,19 +34,11 @@ class ServerException extends RuntimeException {
     /**
      * 异常码
      */
-    Integer exceptionCode
-
-    ServerException(){
-        this.exceptionCode = ServerExceptionCode.SYSTEM_UNKNOWN_ABNORMALITY
-    }
-
-    ServerException(Integer exceptionCode){
-        this.exceptionCode = exceptionCode
-    }
+    Integer serverExceptionCode = ServerExceptionCode.SYSTEM_UNKNOWN_ABNORMALITY
 
     @Override
     String toString() {
-        switch (exceptionCode){
+        switch (serverExceptionCode){
             case ServerExceptionCode.INTERFACE_DISABLE:
                 return 'server.exception.interface-disable'
             case ServerExceptionCode.INTERFACE_MAINTENANCE:

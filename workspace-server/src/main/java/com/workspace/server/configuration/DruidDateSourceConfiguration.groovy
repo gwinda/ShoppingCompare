@@ -10,7 +10,6 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean
 import org.springframework.boot.web.servlet.ServletRegistrationBean
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
-import org.springframework.core.annotation.Order
 import java.sql.SQLException
 
 /**
@@ -19,10 +18,9 @@ import java.sql.SQLException
  * @date 2017/12/27
  */
 @Configuration
-@Order(1)
 class DruidDateSourceConfiguration {
 
-    private Logger logger = LoggerFactory.getLogger(DruidDateSourceConfiguration.class)
+    private Logger logger = LoggerFactory.getLogger(DruidDateSourceConfiguration.class);
 
     @Value('${spring.datasource.url}')
     private String dbUrl
